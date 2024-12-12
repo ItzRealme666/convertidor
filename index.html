@@ -1,0 +1,98 @@
+
+<!-- Index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Unidades</title>
+    <style>
+                /*
+         * Autor: Daniel Malagon Aguilar
+         * Fecha de creación: [01-12-2024]
+         * Última fecha de modificación: [02-12-2024]
+         * Descripción: Aqui es el estilo del archivo
+         */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        form button {
+            background-color: #432029;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #432029;
+        }
+                        /*
+         * Autor: Daniel Malagon Aguilar
+         * Fecha de creación: [04-12-2024]
+         * Última fecha de modificación: [05-12-2024]
+         * Descripción: Abajo indica el titulo además de las opciones de los botones para convertir dando también el metodo post para redireccionar el archivo
+         */
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Convertidor de Unidades</h1>
+        <form action="convertidor.php" method="POST">
+            <label for="conversion">Seleccione la conversión:</label>
+            <select name="conversion" id="conversion" required>
+                <option value="kg_g">De Kg a Gramos</option>
+                <option value="km_mi">De Km a Millas</option>
+                <option value="hrs_seg">De Hrs a Segundos</option>
+            </select>
+
+            <label for="valor">Prueba ingreso de número:</label>
+            <input type="number" name="valor" id="valor" min="0.01" step="0.01" required>
+
+            <button type="submit">Convertir</button>
+        </form>
+    </div>
+</body>
+</html>
